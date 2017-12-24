@@ -1,0 +1,80 @@
+.form-in-columns {
+  display: flex;
+  overflow: auto;
+  height: 100%;
+  width: 100%;
+  padding-right: 30px;
+}
+.el-form-row .el-form-item {
+  display: inline-block;
+}
+.main-layout {
+  height: 100%;
+  position: relative;
+}
+.main-layout > section {
+  height: 100%;
+  padding: 15px 15px 0 15px;
+  overflow: auto;
+  box-sizing: border-box;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transition: right 0.3s ease-in-out;
+}
+.main-layout > aside {
+  width: 200px;
+  background: #fbfefe;
+  position: absolute;
+  margin-top: -1px;
+  padding: 0 20px;
+  box-sizing: border-box;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  transition: transform 0.3s ease-in-out;
+}
+.main-layout > aside::before {
+  content: " ";
+  width: 1px;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: #dfecec;
+}
+.main-layout > aside > .aside-switch {
+  width: 12px;
+  line-height: 100%;
+  font-size: 12px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  color: #ddd;
+  position: absolute;
+  left: -12px;
+  top: 0;
+  bottom: 0;
+}
+.main-layout > aside > .aside-switch:hover {
+  background-color: #ddd;
+  color: #333;
+}
+.main-layout > aside .el-collapse-item__header,
+.main-layout > aside .el-collapse-item__wrap {
+  background: #fbfefe;
+}
+.main-layout.has-aside section {
+  right: 200px;
+}
+.main-layout.hide-aside > section {
+  right: 0;
+}
+.main-layout.hide-aside aside {
+  transform: translate(200px, 0);
+}
+.edui-editor {
+  line-height: initial;
+}
